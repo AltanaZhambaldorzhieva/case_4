@@ -19,7 +19,20 @@ def flowers():
     else:
         print(f'{ru.POSSIBLE_SIZES} S')
     size = input(ru.SIZE).lower()
-    
+
+
+def desserts():
+    biscuit_cake = 2000
+    curd_cake = 1800
+    waffel_cake = 1500
+    chocolate_filling = 500
+    berry_filling = 800
+    cream_filling = 650
+    decoration_flowers = 750
+    decoration_berry = 800
+    decoration_chocolate = 600
+    money = int(input(ru.MONEY))
+    print(f'{ru.DESSERT_CATEGORY}: \n1.{ru.CAKES}\n2.{ru.CAPCAKES}\n3.{ru.CANDIES}')
 
 
 def jewelry():

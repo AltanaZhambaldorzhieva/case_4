@@ -20,3 +20,9 @@ CATEGORY_NECKLACE = 'Выберите подходящий вариант кол
 NECKLACE_CHKER = 'Чокер'
 NECKLACE_KOLLAR = 'Коллар'
 NECKLACE_PRINCES = 'Принцесса'
+
+MONEY = 'Введите сумму, которую вы готовы потратить на подарок'
+DESSERT_CATEGORY = 'Выберите категорию десерта:'
+CAKES = 'Тортики'
+CAPCAKES = 'Капкейки'
+CANDIES = 'Конфеты'
