@@ -36,7 +36,7 @@ def desserts():
 
 def jewelry():
     choice = int(input(f'{ru.JEWELRY}:\n1.{ru.RINGS}\n2.{ru.BRASLETS}\n3.{ru.NECKLACES}\n{ru.CATEGORY_JEWELRY}:'))
-    match choiсe:
+    match choice:
         case 1:
             print(f'{ru.CATEGORY_RINGS}:\n1.{ru.RNG_WENZEL}\n2.{ru.RNG_FINGER}\n3.{ru.RNG_ENGAGEMENT}')
         case 2:
