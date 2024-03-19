@@ -155,6 +155,6 @@ def jewelry():
 
 
 final = flowers()
-print(final)
+print(f'{ru.CHOOSE}: {final}')
 result = ru.RIGHT if desire(final) is True else ru.WRONG
 print(result)
