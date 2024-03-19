@@ -5,7 +5,7 @@ import ru_local as ru
 
 
 def desire(present):
-    return present == f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}'
+    return present == f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}' or f'{ru.STRAWBERRY}'
 
 
 def flowers():
@@ -154,7 +154,7 @@ def jewelry():
                                  f'\n{ru.CATEGORY}: '))
 
 
-final = flowers()
+final = desserts()
 print(f'{ru.CHOOSE}: {final}')
 result = ru.RIGHT if desire(final) is True else ru.WRONG
 print(result)
