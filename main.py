@@ -5,7 +5,7 @@ import ru_local as ru
 
 
 def desire(present):
-    return present == f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}' or f'{ru.STRAWBERRY}'
+    return present == f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}' or present == f'{ru.STRAWBERRY}'
 
 
 def flowers():
