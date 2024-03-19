@@ -47,17 +47,17 @@ def desserts():
     if category == 1:
         if money > 5_000:
             print(f'{ru.BUDGET}:\n1.{ru.NAPOLEON}\n2.{ru.CHEESECAKE}\n3.{ru.TIRAMISU}'
-                  f'\n4.{ru.PRAGUE}\n5.{RED_VELVET}')
+                  f'\n4.{ru.PRAGUE}\n5.{ru.RED_VELVET}')
         elif money > 4_000:
             print(f'{ru.BUDGET}:\n2.{ru.CHEESECAKE}\n3.{ru.TIRAMISU}'
-                  f'\n4.{ru.PRAGUE}\n5.{RED_VELVET}')
+                  f'\n4.{ru.PRAGUE}\n5.{ru.RED_VELVET}')
         elif money > 3_000:
             print(f'{ru.BUDGET}:\n3.{ru.TIRAMISU}'
-                  f'\n4.{ru.PRAGUE}\n5.{RED_VELVET}')
+                  f'\n4.{ru.PRAGUE}\n5.{ru.RED_VELVET}')
         elif money > 2_000:
-            print(f'{ru.BUDGET}:\n4.{ru.PRAGUE}\n5.{RED_VELVET}')
+            print(f'{ru.BUDGET}:\n4.{ru.PRAGUE}\n5.{ru.RED_VELVET}')
         else:
-            print(f'{ru.BUDGET}:\n5.{RED_VELVET}')
+            print(f'{ru.BUDGET}:\n5.{ru.RED_VELVET}')
         cake = int(input(ru.DESSERT_CATEGORY))
         if cake == 1:
             sum = napoleon
@@ -89,10 +89,10 @@ def desserts():
 
     else:
         if money > 5_000:
-            print(f'{ru.BUDGET}:\n1.{ru.STRAWBERRY}\n2.{ru.COCONUT}'\n3.{ru.CARAMEL}'
+            print(f'{ru.BUDGET}:\n1.{ru.STRAWBERRY}\n2.{ru.COCONUT}\n3.{ru.CARAMEL}'
                   f'\n4.{ru.CHOCOLATE}')
         elif money > 4_000:
-            print(f'{ru.BUDGET}:\n2.{ru.COCONUT}'\n3.{ru.CARAMEL}'
+            print(f'{ru.BUDGET}:\n2.{ru.COCONUT}\n3.{ru.CARAMEL}'
                   f'\n4.{ru.CHOCOLATE}')
         elif money > 3_000:
             print(f'{ru.BUDGET}:\n3.{ru.CARAMEL}'
