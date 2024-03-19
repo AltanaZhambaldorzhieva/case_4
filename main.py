@@ -78,19 +78,19 @@ def desserts():
             print(f'{ru.BUDGET}:\n5.{ru.RED_VELVET}')
         cake = int(input(ru.CATEGORY))
         if cake == 1:
-            dessert = 'Торт Наполеон'
+            dessert = f'{ru.NAPOLEON}'
             print(f'{ru.MONEY_SPENT} {napoleon}')
         elif cake == 2:
-            dessert = 'Торт Чизкейк'
+            dessert = f'{ru.CHEESECAKE}'
             print(f'{ru.MONEY_SPENT} {cheesecake}')
         elif cake == 3:
-            dessert = 'Торт Тирамису'
+            dessert = f'{ru.TIRAMISU}'
             print(f'{ru.MONEY_SPENT} {tiramisu}')
         elif cake == 4:
-            dessert = 'Торт Прага'
+            dessert = f'{ru.PRAGUE}'
             print(f'{ru.MONEY_SPENT} {prague}')
         else:
-            dessert = 'Торт Красный бархат'
+            dessert = f'{ru.RED_VELVET}'
             print(f'{ru.MONEY_SPENT} {red_velvet}')
 
     elif category == 2:
@@ -104,13 +104,13 @@ def desserts():
             print(f'{ru.BUDGET}:\n3.{ru.COFFEE_CAPCAKE}')
         capcake = int(input(ru.CATEGORY))
         if capcake == 1:
-            dessert = 'Капкейки шоколадные'
+            dessert = f'{ru.CHOCOLATE_CAPCAKE}'
             print(f'{ru.MONEY_SPENT} {chocolate_capcake}')
         elif capcake == 2:
-            dessert = 'Капкейки ванильные'
+            dessert = f'{ru.VANILA_CAPCAKE}'
             print(f'{ru.MONEY_SPENT} {vanila_capcake}')
         else:
-            dessert = 'Капкейки кофейные'
+            dessert = f'{ru.COFFEE_CAPCAKE}'
             print(f'{ru.MONEY_SPENT} {coffee_capcake}')
 
     else:
@@ -127,16 +127,16 @@ def desserts():
             print(f'{ru.BUDGET}:\n4.{ru.CHOCOLATE}')
         candies = int(input(ru.CATEGORY))
         if candies == 1:
-            dessert = 'Клубника в шоколаде'
+            dessert = f'{ru.STRAWBERRY}'
             print(f'{ru.MONEY_SPENT} {strawberry}')
         elif candies == 2:
-            dessert = 'Кокосовые конфеты'
+            dessert = f'{ru.COCONUT}'
             print(f'{ru.MONEY_SPENT} {coconut}')
         elif candies == 3:
-            dessert = 'Карамельные конфеты'
+            dessert = f'{ru.CARAMEL}'
             print(f'{ru.MONEY_SPENT} {caramel}')
         else:
-            dessert = 'Шоколадные конфеты'
+            dessert = f'{ru.CHOCOLATE}'
             print(f'{ru.MONEY_SPENT} {chocolate}')
     return dessert
 
