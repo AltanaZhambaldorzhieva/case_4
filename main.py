@@ -31,6 +31,16 @@ def flowers():
             print(f'{ru.COST}: {11000 + wrap}')
         case 'xl':
             print(f'{ru.COST}: {13400+ wrap}')
+    if type_bouquet == 1:
+        if size == 's' or size == 'm':
+            return f'{ru.MINI} {ru.BUNCH_OF_FLOWERS}'
+        elif size == 'l' or size == 'xl':
+            return f'{ru.BIG} {ru.BUNCH_OF_FLOWERS}'
+    else:
+        if size == 's' or size == 'm':
+            return f'{ru.MINI} {ru.BOUQUET_OF_FLOWERS}'
+        elif size == 'l' or size == 'xl':
+            return f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}'
 
 
 
