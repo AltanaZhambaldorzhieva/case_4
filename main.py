@@ -9,13 +9,14 @@ def desire(present):
 
 
 def flowers():
-    money = int(input('На какую сумму вы бы хотели приобрести букет?'))
+    money = int(input(ru.BUDGET))
     if money > 13_000:
-        print('Возможные размеры букетов, согласно вашему бюджету: S, M, L, XL')
+        print(f'{ru.POSSIBLE_SIZES} S, M, L, XL')
     elif money > 9_000:
-        print('Возможные размеры букетов, согласно вашему бюджету: S, M, L')
+        print(f'{ru.POSSIBLE_SIZES} S, M, L')
     elif money > 5_000:
-        print('Возможные размеры букетов, согласно вашему бюджету: S, M')
+        print(f'{ru.POSSIBLE_SIZES} S, M')
     else:
-        print('Возможные размеры букетов, согласно вашему бюджету: S')
-    size = input('Выберите размер букета')
+        print(f'{ru.POSSIBLE_SIZES} S')
+    size = input(ru.SIZE)
+
