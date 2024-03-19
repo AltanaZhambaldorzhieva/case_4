@@ -4,6 +4,5 @@
 import ru_local as ru
 
 
-def desire():
+def desire(present):
     return present == ru.ENGAGEMENT_RING
-
