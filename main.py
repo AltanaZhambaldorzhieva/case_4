@@ -20,8 +20,10 @@ def flowers():
         print(f'{ru.POSSIBLE_SIZES} S, M')
     else:
         print(f'{ru.POSSIBLE_SIZES} S')
-    type_bouquet = input(f'{ru.TYPE_BOUQUET}\n1.{ru.BUNCH_OF_FLOWERS}\n2.{ru.BOUQUET_OF_FLOWERS}')
     size = input(ru.SIZE).lower()
+    type_bouquet = input(f'{ru.TYPE_BOUQUET}\n1.{ru.BUNCH_OF_FLOWERS}\n2.{ru.BOUQUET_OF_FLOWERS}\n')
+
+
 
 
 
@@ -53,3 +55,4 @@ def jewelry():
 #result = ru.RIGHT if desire(final) is True else ru.WRONG
 #print(result)
 
+flowers()
