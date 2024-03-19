@@ -18,7 +18,18 @@ def flowers():
         print(f'{ru.POSSIBLE_SIZES} S, M')
     else:
         print(f'{ru.POSSIBLE_SIZES} S')
-    size = input(ru.SIZE).upper()
+    size = input(ru.SIZE).lower()
+    flowers =
+    match size:
+        case 's':
+            print(1)
+        case 'm':
+            print()
+        case 'l':
+            print()
+        case 'xl':
+            print()
+
 
 
 
