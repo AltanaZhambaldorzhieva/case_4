@@ -157,7 +157,13 @@ def jewelry():
                                  f'\n{ru.CATEGORY}: '))
 
 
-final = desserts()
+match category:
+    case 1:
+        final = flowers()
+    case 2:
+        final = desserts()
+    case 3:
+        final = jewelry()
 print(f'{ru.CHOOSE}: {final}')
 result = ru.RIGHT if desire(final) is True else ru.WRONG
 print(result)
