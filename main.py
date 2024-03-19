@@ -3,15 +3,18 @@
 #
 import ru_local as ru
 
-
-print(f'{ru.BEGGIN}:\n1.{ru.FLOWERS}\n2.{ru.DESSERTS}\n3.{ru.DECOR}')
+print(f'{ru.BEGGIN}\n1.{ru.FLOWERS}\n2.{ru.DESSERTS}\n3.{ru.DECOR}')
 category = int(input(ru.CATEGORY))
 
+
 def desire(present):
-    return present == f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}' or present == f'{ru.STRAWBERRY}'
+    return present == f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}' or present == f'{ru.STRAWBERRY}' or present == f'{ru.RNG_ENGAGEMENT}'
 
 
 def flowers():
+    """
+    The function returns the buket you selected.
+    """
     wrap = 350
     delivery = 700
     money = int(input(ru.MONEY))
@@ -27,13 +30,13 @@ def flowers():
     type_bouquet = input(f'{ru.TYPE_BOUQUET}\n1.{ru.BUNCH_OF_FLOWERS}\n2.{ru.BOUQUET_OF_FLOWERS}\n')
     match size:
         case 's':
-            print(f'{ru.COST}: {3000+ wrap + delivery}')
+            print(f'{ru.COST}: {3000 + wrap + delivery}')
         case 'm':
             print(f'{ru.COST}: {7200 + wrap + delivery}')
         case 'l':
             print(f'{ru.COST}: {11000 + wrap}')
         case 'xl':
-            print(f'{ru.COST}: {13400+ wrap}')
+            print(f'{ru.COST}: {13400 + wrap}')
     if type_bouquet == 1:
         if size == 's' or size == 'm':
             return f'{ru.MINI} {ru.BUNCH_OF_FLOWERS}'
@@ -47,6 +50,9 @@ def flowers():
 
 
 def desserts():
+    """
+    The function returns the desserts you selected.
+    """
     napoleon = 4500
     cheesecake = 3600
     tiramisu = 2850
@@ -143,18 +149,43 @@ def desserts():
             print(f'{ru.MONEY_SPENT} {chocolate}')
     return dessert
 
+
 def jewelry():
-    choice = int(input(f'{ru.JEWELRY}\n1.{ru.RINGS}\n2.{ru.BRASLETS}\n3.{ru.NECKLACES}\n{ru.CATEGORY}: '))
+    """
+    The function returns the jewelry you selected.
+    """
+    money = int(input(f'{ru.MONEY}: '))
+    choice_met = input(f'{ru.METAL}: {ru.SILVER}, {ru.GOLD}\n{ru.METAL_VAR}: ')
+    choice = int(input(f'{ru.JEWELRY}\n1.{ru.RINGS}\n2.{ru.BRASLETS}\n3.{ru.NECKLACES}'
+                       f'\n{ru.CATEGORY}: '))
+
     match choice:
         case 1:
-            choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.RNG_WENZEL}\n2.{ru.RNG_FINGER}\n3.{ru.RNG_ENGAGEMENT}'
-                                 f'\n{ru.CATEGORY}: '))
+            choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.RNG_WENZEL}\n2.{ru.RNG_FINGER}'
+                                 f'\n3.{ru.RNG_ENGAGEMENT}\n{ru.CATEGORY}: '))
         case 2:
-            choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.BRASLET_CHN}\n2.{ru.BRASLET_THN}\n3.{ru.BRASLET_WCKR}'
-                                 f'\n{ru.CATEGORY}: '))
+            choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.BRASLET_CHN}\n2.{ru.BRASLET_THN}'
+                                 f'\n3.{ru.BRASLET_WCKR}\n{ru.CATEGORY}: '))
         case 3:
-            choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.NECKLACE_KOLLAR}\n2.{ru.NECKLACE_CHKER}\n3.{ru.NECKLACE_PRINCES}'
-                                 f'\n{ru.CATEGORY}: '))
+            choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.NECKLACE_KOLLAR}\n2.{ru.NECKLACE_CHKER}'
+                                 f'\n3.{ru.NECKLACE_PRINCES}\n{ru.CATEGORY}: '))
+
+    if choice_met == 'золото' and money >= 10000:
+        choice_smpl = int(input(f'{ru.SAMPLE}: 585, 500\n{ru.SAMP_VAR}: '))
+        print(f'{ru.CHOISE}')
+    elif choice_met == 'золото' and money < 10000:
+        choice_smpl = int(input(f'{ru.SAMPLE}: 500\n{ru.SAMP_VAR}: '))
+        print(f'{ru.CHOISE}')
+
+    if choice_met == 'серебро' and money >= 10000:
+        choice_smpl = int(input(f'{ru.SAMPLE}: 975, 925\n{ru.SAMP_VAR}: '))
+        print(f'{ru.CHOISE}')
+    elif choice_met == 'серебро' and money < 10000:
+        choice_smpl = int(input(f'{ru.SAMPLE}: 925\n{ru.SAMP_VAR}: '))
+        print(f'{ru.CHOISE}')
+
+    choice_1 = f'{ru.RNG_ENGAGEMENT}'
+    return choice_1
 
 
 match category:
@@ -164,6 +195,8 @@ match category:
         final = desserts()
     case 3:
         final = jewelry()
+
 print(f'{ru.CHOOSE}: {final}')
 result = ru.RIGHT if desire(final) is True else ru.WRONG
 print(result)
+
