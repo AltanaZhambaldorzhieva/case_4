@@ -5,44 +5,23 @@ import ru_local as ru
 
 
 def desire(present):
-    return present == f'{ru.BIG} {ru.BUNCH_OF_FLOWERS}'
+    return present == ru.RNG_ENGAGEMENT
 
 
 def flowers():
     wrap = 350
-    delivery = 700
-    money = int(input(ru.MONEY_FLWR))
-    if money > 10_000:
+    delivery = 1000
+    money = int(input(ru.MONEY))
+    if money > 13_000:
         print(f'{ru.POSSIBLE_SIZES} S, M, L, XL')
-    elif money > 7_000:
+    elif money > 9_000:
         print(f'{ru.POSSIBLE_SIZES} S, M, L')
-    elif money > 4_000:
+    elif money > 5_000:
         print(f'{ru.POSSIBLE_SIZES} S, M')
-    elif money > 2_000:
+    else:
         print(f'{ru.POSSIBLE_SIZES} S')
     size = input(ru.SIZE).lower()
     type_bouquet = input(f'{ru.TYPE_BOUQUET}\n1.{ru.BUNCH_OF_FLOWERS}\n2.{ru.BOUQUET_OF_FLOWERS}\n')
-    match size:
-        case 's':
-            print(f'{ru.COST}: {3000 + wrap + delivery}')
-        case 'm':
-            print(f'{ru.COST}: {4700 + wrap + delivery}')
-        case 'l':
-            print(f'{ru.COST}: {7300 + wrap}')
-        case 'xl':
-            print(f'{ru.COST}: {11000 + wrap}')
-    if type_bouquet == 1:
-        if size == 's' or 'm':
-            return f'{ru.MINI} {ru.BUNCH_OF_FLOWERS}'
-        if size == 'l' or 'xl':
-            return f'{ru.BIG} {ru.BUNCH_OF_FLOWERS}'
-    else:
-        if size == 's' or 'm':
-            return f'{ru.MINI} {ru.BOUQUET_OF_FLOWERS}'
-        if size == 'l' or 'xl':
-            return f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}'
-
-
 
 
 def desserts():
@@ -61,7 +40,6 @@ def desserts():
     caramel = 3499
     chocolate = 1200
 
-    sum = 0
     money = int(input(ru.MONEY))
     print(f'{ru.DESSERT_CATEGORY}: \n1.{ru.CAKES}\n2.{ru.CAPCAKES}\n3.{ru.CANDIES}')
     category = int(input(ru.CATEGORY))
@@ -79,17 +57,22 @@ def desserts():
             print(f'{ru.BUDGET}:\n4.{ru.PRAGUE}\n5.{ru.RED_VELVET}')
         else:
             print(f'{ru.BUDGET}:\n5.{ru.RED_VELVET}')
-        cake = int(input(ru.DESSERT_CATEGORY))
+        cake = int(input(ru.CATEGORY))
         if cake == 1:
-            sum = napoleon
+            dessert = 'Торт Наполеон'
+            print(f'{ru.MONEY_SPENT} {napoleon}')
         elif cake == 2:
-            sum = cheesecake
+            dessert = 'Торт Чизкейк'
+            print(f'{ru.MONEY_SPENT} {cheesecake}')
         elif cake == 3:
-            sum = tiramisu
+            dessert = 'Торт Тирамису'
+            print(f'{ru.MONEY_SPENT} {tiramisu}')
         elif cake == 4:
-            sum = prague
+            dessert = 'Торт Прага'
+            print(f'{ru.MONEY_SPENT} {prague}')
         else:
-            sum = red_velvet
+            dessert = 'Торт Красный бархат'
+            print(f'{ru.MONEY_SPENT} {red_velvet}')
 
     elif category == 2:
         if money > 4_000:
@@ -100,13 +83,16 @@ def desserts():
                   f'\n3.{ru.COFFEE_CAPCAKE}')
         elif money > 1_500:
             print(f'{ru.BUDGET}:\n3.{ru.COFFEE_CAPCAKE}')
-        capcake = int(input(ru.DESSERT_CATEGORY))
+        capcake = int(input(ru.CATEGORY))
         if capcake == 1:
-            sum = chocolate_capcake
+            dessert = 'Капкейки шоколадные'
+            print(f'{ru.MONEY_SPENT} {chocolate_capcake}')
         elif capcake == 2:
-            sum = vanila_capcake
+            dessert = 'Капкейки ванильные'
+            print(f'{ru.MONEY_SPENT} {vanila_capcake}')
         else:
-            sum = coffee_capcake
+            dessert = 'Капкейки кофейные'
+            print(f'{ru.MONEY_SPENT} {coffee_capcake}')
 
     else:
         if money > 5_000:
@@ -120,16 +106,20 @@ def desserts():
                   f'\n4.{ru.CHOCOLATE}')
         else:
             print(f'{ru.BUDGET}:\n4.{ru.CHOCOLATE}')
-        candies = int(input(ru.DESSERT_CATEGORY))
+        candies = int(input(ru.CATEGORY))
         if candies == 1:
-            sum = strawberry
+            dessert = 'Клубника в шоколаде'
+            print(f'{ru.MONEY_SPENT} {strawberry}')
         elif candies == 2:
-            sum = coconut
+            dessert = 'Кокосовые конфеты'
+            print(f'{ru.MONEY_SPENT} {coconut}')
         elif candies == 3:
-            sum = caramel
+            dessert = 'Карамельные конфеты'
+            print(f'{ru.MONEY_SPENT} {caramel}')
         else:
-            sum = chocolate
-
+            dessert = 'Шоколадные конфеты'
+            print(f'{ru.MONEY_SPENT} {chocolate}')
+    return dessert
 
 def jewelry():
     choice = int(input(f'{ru.JEWELRY}\n1.{ru.RINGS}\n2.{ru.BRASLETS}\n3.{ru.NECKLACES}\n{ru.CATEGORY}: '))
@@ -142,8 +132,10 @@ def jewelry():
                                  f'\n{ru.CATEGORY}: '))
         case 3:
             choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.NECKLACE_KOLLAR}\n2.{ru.NECKLACE_CHKER}\n3.{ru.NECKLACE_PRINCES}'
-                                 f'\n{ru.CATEGORY}: '))
+                                 f'\n{ru.CATEGORY}: '))`
 
-final = flowers()
-result = ru.RIGHT if desire(final) is True else ru.WRONG
-print(result)
+
+# result = ru.RIGHT if desire(final) is True else ru.WRONG
+# print(result)
+
+desserts()
