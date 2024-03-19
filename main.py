@@ -4,6 +4,9 @@
 import ru_local as ru
 
 
+print(f'{ru.BEGGIN}:\n1.{ru.FLOWERS}\n2.{ru.DESSERTS}\n3.{ru.DECOR}')
+category = int(input(ru.CATEGORY))
+
 def desire(present):
     return present == f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}' or present == f'{ru.STRAWBERRY}'
 
