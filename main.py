@@ -23,8 +23,8 @@ def flowers():
 
 
 def jewelry():
-    choise = int(input(f'{ru.CATEGORY_JEWELRY}:\n1.{ru.RINGS}\n2.{ru.BRASLETS}\n3.{ru.NECKLACES}'))
-    match choise:
+    choiсe = int(input(f'{ru.JEWELRY}:\n1.{ru.RINGS}\n2.{ru.BRASLETS}\n3.{ru.NECKLACES}\n{ru.CATEGORY_JEWELRY}:'))
+    match choiсe:
         case 1:
             print(f'{ru.CATEGORY_RINGS}:\n1.{ru.RNG_WENZEL}\n2.{ru.RNG_FINGER}\n3.{ru.RNG_ENGAGEMENT}')
         case 2:
