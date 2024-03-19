@@ -9,7 +9,7 @@ def desire(present):
 
 
 def flowers():
-    money = int(input(ru.BUDGET))
+    money = int(input(ru.MONEY))
     if money > 13_000:
         print(f'{ru.POSSIBLE_SIZES} S, M, L, XL')
     elif money > 9_000:
@@ -34,9 +34,8 @@ def desserts():
     money = int(input(ru.MONEY))
     print(f'{ru.DESSERT_CATEGORY}: \n1.{ru.CAKES}\n2.{ru.CAPCAKES}\n3.{ru.CANDIES}')
 
-
 def jewelry():
-    choiсe = int(input(f'{ru.JEWELRY}:\n1.{ru.RINGS}\n2.{ru.BRASLETS}\n3.{ru.NECKLACES}\n{ru.CATEGORY_JEWELRY}:'))
+    choice = int(input(f'{ru.JEWELRY}:\n1.{ru.RINGS}\n2.{ru.BRASLETS}\n3.{ru.NECKLACES}\n{ru.CATEGORY_JEWELRY}:'))
     match choiсe:
         case 1:
             print(f'{ru.CATEGORY_RINGS}:\n1.{ru.RNG_WENZEL}\n2.{ru.RNG_FINGER}\n3.{ru.RNG_ENGAGEMENT}')
@@ -45,5 +44,5 @@ def jewelry():
         case 3:
             print(f'{ru.CATEGORY_NECKLACE}:\n1.{ru.NECKLACE_KOLLAR}\n2.{ru.NECKLACE_CHKER}\n3.{ru.NECKLACE_PRINCES}')
 
-#result = ru.RIGHT if desire(choice) is True else ru.WRONG
+#result = ru.RIGHT if desire(final) is True else ru.WRONG
 #print(result)
