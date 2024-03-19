@@ -18,5 +18,9 @@ def flowers():
         print(f'{ru.POSSIBLE_SIZES} S, M')
     else:
         print(f'{ru.POSSIBLE_SIZES} S')
-    size = input(ru.SIZE)
+    size = input(ru.SIZE).upper()
 
+
+
+#result = ru.RIGHT if desire(choice) is True else ru.WRONG
+#print(result)
