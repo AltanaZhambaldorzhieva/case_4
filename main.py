@@ -5,7 +5,7 @@ import ru_local as ru
 
 
 def desire(present):
-    return present == ru.RNG_ENGAGEMENT
+    return present == f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}'
 
 
 def flowers():
@@ -41,8 +41,6 @@ def flowers():
             return f'{ru.MINI} {ru.BOUQUET_OF_FLOWERS}'
         elif size == 'l' or size == 'xl':
             return f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}'
-
-
 
 
 def desserts():
@@ -153,10 +151,10 @@ def jewelry():
                                  f'\n{ru.CATEGORY}: '))
         case 3:
             choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.NECKLACE_KOLLAR}\n2.{ru.NECKLACE_CHKER}\n3.{ru.NECKLACE_PRINCES}'
-                                 f'\n{ru.CATEGORY}: '))`
+                                 f'\n{ru.CATEGORY}: '))
 
 
-# result = ru.RIGHT if desire(final) is True else ru.WRONG
-# print(result)
-
-desserts()
+final = flowers()
+print(final)
+result = ru.RIGHT if desire(final) is True else ru.WRONG
+print(result)
