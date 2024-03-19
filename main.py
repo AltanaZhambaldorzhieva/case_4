@@ -5,23 +5,44 @@ import ru_local as ru
 
 
 def desire(present):
-    return present == ru.RNG_ENGAGEMENT
+    return present == f'{ru.BIG} {ru.BUNCH_OF_FLOWERS}'
 
 
 def flowers():
     wrap = 350
-    delivery = 1000
-    money = int(input(ru.MONEY))
-    if money > 13_000:
+    delivery = 700
+    money = int(input(ru.MONEY_FLWR))
+    if money > 10_000:
         print(f'{ru.POSSIBLE_SIZES} S, M, L, XL')
-    elif money > 9_000:
+    elif money > 7_000:
         print(f'{ru.POSSIBLE_SIZES} S, M, L')
-    elif money > 5_000:
+    elif money > 4_000:
         print(f'{ru.POSSIBLE_SIZES} S, M')
-    else:
+    elif money > 2_000:
         print(f'{ru.POSSIBLE_SIZES} S')
     size = input(ru.SIZE).lower()
     type_bouquet = input(f'{ru.TYPE_BOUQUET}\n1.{ru.BUNCH_OF_FLOWERS}\n2.{ru.BOUQUET_OF_FLOWERS}\n')
+    match size:
+        case 's':
+            print(f'{ru.COST}: {3000 + wrap + delivery}')
+        case 'm':
+            print(f'{ru.COST}: {4700 + wrap + delivery}')
+        case 'l':
+            print(f'{ru.COST}: {7300 + wrap}')
+        case 'xl':
+            print(f'{ru.COST}: {11000 + wrap}')
+    if type_bouquet == 1:
+        if size == 's' or 'm':
+            return f'{ru.MINI} {ru.BUNCH_OF_FLOWERS}'
+        if size == 'l' or 'xl':
+            return f'{ru.BIG} {ru.BUNCH_OF_FLOWERS}'
+    else:
+        if size == 's' or 'm':
+            return f'{ru.MINI} {ru.BOUQUET_OF_FLOWERS}'
+        if size == 'l' or 'xl':
+            return f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}'
+
+
 
 
 def desserts():
@@ -123,8 +144,6 @@ def jewelry():
             choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.NECKLACE_KOLLAR}\n2.{ru.NECKLACE_CHKER}\n3.{ru.NECKLACE_PRINCES}'
                                  f'\n{ru.CATEGORY}: '))
 
-
-# result = ru.RIGHT if desire(final) is True else ru.WRONG
-# print(result)
-
-flowers()
+final = flowers()
+result = ru.RIGHT if desire(final) is True else ru.WRONG
+print(result)
