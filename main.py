@@ -9,6 +9,8 @@ def desire(present):
 
 
 def flowers():
+    wrap = 350
+    delivery = 1000
     money = int(input(ru.MONEY))
     if money > 13_000:
         print(f'{ru.POSSIBLE_SIZES} S, M, L, XL')
@@ -18,7 +20,9 @@ def flowers():
         print(f'{ru.POSSIBLE_SIZES} S, M')
     else:
         print(f'{ru.POSSIBLE_SIZES} S')
+    type_bouquet = input(f'{ru.TYPE_BOUQUET}\n1.{ru.BUNCH_OF_FLOWERS}\n2.{ru.BOUQUET_OF_FLOWERS}')
     size = input(ru.SIZE).lower()
+
 
 
 def desserts():
@@ -46,3 +50,4 @@ def jewelry():
 
 #result = ru.RIGHT if desire(final) is True else ru.WRONG
 #print(result)
+
