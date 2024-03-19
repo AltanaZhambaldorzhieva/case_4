@@ -5,5 +5,5 @@ import ru_local as ru
 
 
 def desire():
-    return present == ru.RING
+    return present == ru.ENGAGEMENT_RING
 
