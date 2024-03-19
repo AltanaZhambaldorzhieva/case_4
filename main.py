@@ -19,22 +19,11 @@ def flowers():
     else:
         print(f'{ru.POSSIBLE_SIZES} S')
     size = input(ru.SIZE).lower()
-    flowers =
-    match size:
-        case 's':
-            print(1)
-        case 'm':
-            print()
-        case 'l':
-            print()
-        case 'xl':
-            print()
+    
 
 
-
-import ru_local as ru
-choise = int(input(f'{ru.CATEGORY_JEWELRY}:\n1.{ru.RINGS}\n2.{ru.BRASLETS}\n3.{ru.NECKLACES}'))
 def jewelry():
+    choise = int(input(f'{ru.CATEGORY_JEWELRY}:\n1.{ru.RINGS}\n2.{ru.BRASLETS}\n3.{ru.NECKLACES}'))
     match choise:
         case 1:
             print(f'{ru.CATEGORY_RINGS}:\n1.{ru.RNG_WENZEL}\n2.{ru.RNG_FINGER}\n3.{ru.RNG_ENGAGEMENT}')
