@@ -10,7 +10,7 @@ def desire(present):
 
 def flowers():
     wrap = 350
-    delivery = 1000
+    delivery = 700
     money = int(input(ru.MONEY))
     if money > 13_000:
         print(f'{ru.POSSIBLE_SIZES} S, M, L, XL')
@@ -22,6 +22,17 @@ def flowers():
         print(f'{ru.POSSIBLE_SIZES} S')
     size = input(ru.SIZE).lower()
     type_bouquet = input(f'{ru.TYPE_BOUQUET}\n1.{ru.BUNCH_OF_FLOWERS}\n2.{ru.BOUQUET_OF_FLOWERS}\n')
+    match size:
+        case 's':
+            print(f'{ru.COST}: {3000+ wrap + delivery}')
+        case 'm':
+            print(f'{ru.COST}: {7200 + wrap + delivery}')
+        case 'l':
+            print(f'{ru.COST}: {11000 + wrap}')
+        case 'xl':
+            print(f'{ru.COST}: {13400+ wrap}')
+
+
 
 
 def desserts():
