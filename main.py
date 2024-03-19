@@ -24,9 +24,6 @@ def flowers():
     type_bouquet = input(f'{ru.TYPE_BOUQUET}\n1.{ru.BUNCH_OF_FLOWERS}\n2.{ru.BOUQUET_OF_FLOWERS}\n')
 
 
-
-
-
 def desserts():
     biscuit_cake = 2000
     curd_cake = 1800
@@ -40,19 +37,22 @@ def desserts():
     money = int(input(ru.MONEY))
     print(f'{ru.CATEGORY}: \n1.{ru.CAKES}\n2.{ru.CAPCAKES}\n3.{ru.CANDIES}')
 
+
 def jewelry():
-    choice = int(input(f'{ru.JEWELRY}:\n1.{ru.RINGS}\n2.{ru.BRASLETS}\n3.{ru.NECKLACES}\n{ru.CATEGORY}:'))
+    choice = int(input(f'{ru.JEWELRY}\n1.{ru.RINGS}\n2.{ru.BRASLETS}\n3.{ru.NECKLACES}\n{ru.CATEGORY}: '))
     match choice:
         case 1:
-            print(f'{ru.VARIANT}:\n1.{ru.RNG_WENZEL}\n2.{ru.RNG_FINGER}\n3.{ru.RNG_ENGAGEMENT}')
+            choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.RNG_WENZEL}\n2.{ru.RNG_FINGER}\n3.{ru.RNG_ENGAGEMENT}'
+                                 f'\n{ru.CATEGORY}: '))
         case 2:
-            print(f'{ru.VARIANT}:\n1.{ru.BRASLET_CHN}\n2.{ru.BRASLET_THN}\n3.{ru.BRASLET_WCKR}')
+            choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.BRASLET_CHN}\n2.{ru.BRASLET_THN}\n3.{ru.BRASLET_WCKR}'
+                                 f'\n{ru.CATEGORY}: '))
         case 3:
-            print(f'{ru.VARIANT}:\n1.{ru.NECKLACE_KOLLAR}\n2.{ru.NECKLACE_CHKER}\n3.{ru.NECKLACE_PRINCES}')
+            choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.NECKLACE_KOLLAR}\n2.{ru.NECKLACE_CHKER}\n3.{ru.NECKLACE_PRINCES}'
+                                 f'\n{ru.CATEGORY}: '))
 
 
-
-#result = ru.RIGHT if desire(final) is True else ru.WRONG
-#print(result)
+# result = ru.RIGHT if desire(final) is True else ru.WRONG
+# print(result)
 
 flowers()
