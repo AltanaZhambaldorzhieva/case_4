@@ -32,17 +32,19 @@ def desserts():
     decoration_berry = 800
     decoration_chocolate = 600
     money = int(input(ru.MONEY))
-    print(f'{ru.DESSERT_CATEGORY}: \n1.{ru.CAKES}\n2.{ru.CAPCAKES}\n3.{ru.CANDIES}')
+    print(f'{ru.CATEGORY}: \n1.{ru.CAKES}\n2.{ru.CAPCAKES}\n3.{ru.CANDIES}')
 
 def jewelry():
-    choice = int(input(f'{ru.JEWELRY}:\n1.{ru.RINGS}\n2.{ru.BRASLETS}\n3.{ru.NECKLACES}\n{ru.CATEGORY_JEWELRY}:'))
+    choice = int(input(f'{ru.JEWELRY}:\n1.{ru.RINGS}\n2.{ru.BRASLETS}\n3.{ru.NECKLACES}\n{ru.CATEGORY}:'))
     match choice:
         case 1:
-            print(f'{ru.CATEGORY_RINGS}:\n1.{ru.RNG_WENZEL}\n2.{ru.RNG_FINGER}\n3.{ru.RNG_ENGAGEMENT}')
+            print(f'{ru.VARIANT}:\n1.{ru.RNG_WENZEL}\n2.{ru.RNG_FINGER}\n3.{ru.RNG_ENGAGEMENT}')
         case 2:
-            print(f'{ru.CATEGORY_BRASLETS}:\n1.{ru.BRASLET_CHN}\n2.{ru.BRASLET_THN}\n3.{ru.BRASLET_WCKR}')
+            print(f'{ru.VARIANT}:\n1.{ru.BRASLET_CHN}\n2.{ru.BRASLET_THN}\n3.{ru.BRASLET_WCKR}')
         case 3:
-            print(f'{ru.CATEGORY_NECKLACE}:\n1.{ru.NECKLACE_KOLLAR}\n2.{ru.NECKLACE_CHKER}\n3.{ru.NECKLACE_PRINCES}')
+            print(f'{ru.VARIANT}:\n1.{ru.NECKLACE_KOLLAR}\n2.{ru.NECKLACE_CHKER}\n3.{ru.NECKLACE_PRINCES}')
+
+
 
 #result = ru.RIGHT if desire(final) is True else ru.WRONG
 #print(result)
