@@ -70,8 +70,8 @@ def desserts():
 
     money = int(input(ru.MONEY))
     print(f'{ru.DESSERT_CATEGORY}: \n1.{ru.CAKES}\n2.{ru.CAPCAKES}\n3.{ru.CANDIES}')
-    category = int(input(ru.CATEGORY))
-    if category == 1:
+    category_dessert = int(input(ru.CATEGORY))
+    if category_dessert == 1:
         if money > 5_000:
             print(f'{ru.BUDGET}:\n1.{ru.NAPOLEON}\n2.{ru.CHEESECAKE}\n3.{ru.TIRAMISU}'
                   f'\n4.{ru.PRAGUE}\n5.{ru.RED_VELVET}')
@@ -102,7 +102,7 @@ def desserts():
             dessert = f'{ru.RED_VELVET}'
             print(f'{ru.MONEY_SPENT} {red_velvet}')
 
-    elif category == 2:
+    elif category_dessert == 2:
         if money > 4_000:
             print(f'{ru.BUDGET}:\n1.{ru.CHOCOLATE_CAPCAKE}\n2.{ru.VANILA_CAPCAKE}'
                   f'\n3.{ru.COFFEE_CAPCAKE}')
