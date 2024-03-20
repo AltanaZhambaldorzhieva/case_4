@@ -9,7 +9,7 @@ category = int(input(ru.CATEGORY))
 
 def desire(present):
     """
-        The function returns girl's preferences.
+    The function returns girl's preferences.
     """
     return (present == f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}' or present == f'{ru.STRAWBERRY}' or present ==
             f'{ru.RNG_ENGAGEMENT}')
