@@ -163,13 +163,15 @@ def jewelry():
         case 1:
             choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.RNG_WENZEL}\n2.{ru.RNG_FINGER}'
                                  f'\n3.{ru.RNG_ENGAGEMENT}\n{ru.CATEGORY}: '))
+            print(f'{ru.CHOOSE}: {choice_1}')
         case 2:
             choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.BRASLET_CHN}\n2.{ru.BRASLET_THN}'
                                  f'\n3.{ru.BRASLET_WCKR}\n{ru.CATEGORY}: '))
+            print(f'{ru.CHOOSE}: {choice_1}')
         case 3:
             choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.NECKLACE_KOLLAR}\n2.{ru.NECKLACE_CHKER}'
                                  f'\n3.{ru.NECKLACE_PRINCES}\n{ru.CATEGORY}: '))
-    print(f'{ru.CHOOSE}: {choice_1}')
+            print(f'{ru.CHOOSE}: {choice_1}')
 
     if choice_met == 'золото' and money >= 10000:
         choice_smpl = int(input(f'{ru.SAMPLE}: 585, 500\n{ru.SAMP_VAR}: '))
