@@ -191,6 +191,8 @@ def jewelry():
         print(f'{ru.CHOOSE}: {choice_met} {choice_smpl}')
     print(f'{ru.CHOISE}')
 
+    if choice == 1 and choice_1 == 3:
+        choice_1 = f'{ru.RNG_ENGAGEMENT}'
     return choice_1
 
 
