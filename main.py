@@ -170,7 +170,7 @@ def jewelry():
         case 3:
             choice_1 = int(input(f'{ru.VARIANT}\n1.{ru.NECKLACE_KOLLAR}\n2.{ru.NECKLACE_CHKER}'
                                  f'\n3.{ru.NECKLACE_PRINCES}\n{ru.CATEGORY}: '))
-
+    print(f'{ru.CHOOSE}: {choice_1}')
     if choice_met == 'золото' and money >= 10000:
         choice_smpl = int(input(f'{ru.SAMPLE}: 585, 500\n{ru.SAMP_VAR}: '))
         print(f'{ru.CHOISE}')
@@ -184,6 +184,7 @@ def jewelry():
     elif choice_met == 'серебро' and money < 10000:
         choice_smpl = int(input(f'{ru.SAMPLE}: 925\n{ru.SAMP_VAR}: '))
         print(f'{ru.CHOISE}')
+    print(f'{ru.CHOOSE}: {choice_met}{choice_smpl}')
 
     choice_1 = f'{ru.RNG_ENGAGEMENT}'
     return choice_1
