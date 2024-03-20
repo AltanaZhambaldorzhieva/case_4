@@ -8,7 +8,8 @@ category = int(input(ru.CATEGORY))
 
 
 def desire(present):
-    return present == f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}' or present == f'{ru.STRAWBERRY}' or present == f'{ru.RNG_ENGAGEMENT}'
+    return (present == f'{ru.BIG} {ru.BOUQUET_OF_FLOWERS}' or present == f'{ru.STRAWBERRY}' or present ==
+            f'{ru.RNG_ENGAGEMENT}')
 
 
 def flowers():
@@ -195,8 +196,6 @@ match category:
         final = desserts()
     case 3:
         final = jewelry()
-
 print(f'{ru.CHOOSE}: {final}')
 result = ru.RIGHT if desire(final) is True else ru.WRONG
 print(result)
-
